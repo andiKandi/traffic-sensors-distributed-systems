@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "3fac505c-5380-48e8-b1a4-c17f386dbeff",
+		"name": "Connected Cars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/SensorData/current/all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e49c3001-d7d0-4d46-b723-6361d468ccab",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Should have four metrics\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.length(4);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:83.0) Gecko/20100101 Firefox/83.0"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.5"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "Webstorm-d8801aa8=f7e1dd12-012c-4110-9f2f-2fe2a8f27f47"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/current/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"current",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/current/speed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7817a9cb-d522-4393-9a49-0e8c4d0dd890",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Should have one metrics\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.length(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/current/speed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"current",
+						"speed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/current/traffic",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b19be3c5-1322-4846-a831-673366cb4caf",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Should have one metrics\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.length(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/current/traffic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"current",
+						"traffic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/current/fuel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "000635d8-053c-4bab-be14-124933d8eae6",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Should have one metrics\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.length(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/current/fuel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"current",
+						"fuel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/current/distance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f56d3b0c-2583-418d-8b4f-45f9c7badb92",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Should have one metrics\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.length(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/current/distance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"current",
+						"distance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/history/all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "457d377b-636e-416d-b6b5-944d9b0774cc",
+						"exec": [
+							"",
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 250ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(250);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/history/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"history",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/history/traffic",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0fb3a0a6-753d-4e75-bb8d-345ac8de41c3",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/history/traffic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"history",
+						"traffic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/history/fuel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f05841f-a82b-4ecc-8705-e4cf859dc873",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/history/fuel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"history",
+						"fuel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/history/distance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2508b74d-6baa-48d3-b480-0a017f464699",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/history/distance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"history",
+						"distance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/SensorData/history/speed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1e2eeda3-e4be-4de1-b649-68e80ba3c914",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/history/speed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"history",
+						"speed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "138d2d68-bdca-4fd9-9d3b-218e1ab9d32a",
+						"exec": [
+							"pm.test(\"PERFORMANCE TEST: Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"FUNCTIONAL TEST: Should have four metrics\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.length(4);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http:/localhost:8080/SensorData/_404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f1ececb-780c-4427-b3f2-702083b1670c",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http:/localhost:8080/SensorData/current/all_501",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8e36a4f6-20ff-4f00-9a81-8604bb26c5d0",
+						"exec": [
+							"pm.test(\"Status code is 501\", function () {",
+							"    pm.response.to.have.status(501);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/SensorData/current/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SensorData",
+						"current",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

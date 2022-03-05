@@ -1,0 +1,8 @@
+FROM openjdk:11
+COPY Sensor/target/*-jar-with-dependencies.jar /usr/app/app.jar
+
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.7.3/wait /wait
+RUN chmod +x /wait
+
+COPY Sensor/sensor.sh /run.sh
+ENTRYPOINT ["sh","/run.sh"]

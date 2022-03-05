@@ -1,0 +1,154 @@
+version: '3.7'
+services:
+  master:
+    image: mariadb:10.3
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'Y'
+    volumes:
+      - ./sql/master:/docker-entrypoint-initdb.d
+    command: mysqld --log-bin=mariadb-bin --binlog-format=ROW --server-id=3000 --log-slave-updates
+    ports:
+      - "4001:3306"
+
+  slave1:
+    image: mariadb:10.3
+    depends_on:
+      - master
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'Y'
+    volumes:
+      - ./sql/slave:/docker-entrypoint-initdb.d
+    command: mysqld --log-bin=mariadb-bin --binlog-format=ROW --server-id=3001 --log-slave-updates
+    ports:
+      - "4002:3306"
+
+  slave2:
+    image: mariadb:10.3
+    depends_on:
+      - master
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'Y'
+    volumes:
+      - ./sql/slave:/docker-entrypoint-initdb.d
+    command: mysqld --log-bin=mariadb-bin --binlog-format=ROW --server-id=3002 --log-slave-updates
+    ports:
+      - "4003:3306"
+
+  maxscale:
+    image: mariadb/maxscale:2.4
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_Maxscale
+    depends_on:
+      - master
+      - slave1
+      - slave2
+    volumes:
+      - ./maxscale.cnf.d:/etc/maxscale.cnf.d
+    ports:
+      - "4006:4006"  # readwrite port
+      - "4008:4008"  # readonly port
+      - "8989:8989"  # REST API port
+
+  server:
+    image: server:server
+    container_name: Server
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_Server
+    environment:
+      - 'database=maxscale:4006'
+      - 'rpcPort=50555'
+      - 'WAIT_HOSTS=maxscale:4006,master:3306,slave1:3306,slave2:3306'
+      - 'WAIT_HOSTS_TIMEOUT=90'
+    ports:
+      - "50555:50555"
+    depends_on:
+      - "maxscale"
+
+  central:
+    image: central:central
+    container_name: Central
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_Central
+    environment:
+      - 'serverip=server'
+      - 'serverport=50555'
+      - 'apiport=8081'
+      - 'brokerip=broker'
+      - 'WAIT_HOSTS=server:50555'
+      - 'WAIT_HOSTS_TIMEOUT=90'
+    ports:
+      - "8081:8081"
+    depends_on:
+      - "server"
+    links:
+      - "server:server"
+
+  broker:
+    image: hivemq/hivemq4:dns-latest
+    container_name: broker
+    ports:
+      - 1883:1883
+      - 8080:8080
+
+  sensor1:
+    image: sensor:mqtt
+    container_name: Sensor_FUEL
+    build:
+     context: .
+     dockerfile: Dockerfiles/Dockerfile_Sensor
+    environment:
+      - 'brokerIp=broker'
+      - 'port=1883'
+      - 'sensortype=FUEL'
+      - 'sendInterval=3000'
+      - 'WAIT_HOSTS=broker:1883'
+    depends_on:
+      - "broker"
+
+  sensor2:
+    image: sensor:mqtt
+    container_name: Sensor_SPEED
+    build:
+     context: .
+     dockerfile: Dockerfiles/Dockerfile_Sensor
+    environment:
+      - 'brokerIp=broker'
+      - 'port=1883'
+      - 'sensortype=SPEED'
+      - 'sendInterval=3000'
+      - 'WAIT_HOSTS=broker:1883'
+    depends_on:
+      - "broker"
+
+  sensor3:
+    image: sensor:mqtt
+    container_name: Sensor_TRAFFIC
+    build:
+     context: .
+     dockerfile: Dockerfiles/Dockerfile_Sensor
+    environment:
+      - 'brokerIp=broker'
+      - 'port=1883'
+      - 'sensortype=TRAFFIC'
+      - 'sendInterval=3000'
+      - 'WAIT_HOSTS=broker:1883'
+    depends_on:
+      - "broker"
+
+  sensor4:
+    image: sensor:mqtt
+    container_name: Sensor_DISTANCE
+    build:
+     context: .
+     dockerfile: Dockerfiles/Dockerfile_Sensor
+    environment:
+      - 'brokerIp=broker'
+      - 'port=1883'
+      - 'sensortype=DISTANCE'
+      - 'sendInterval=3000'
+      - 'WAIT_HOSTS=broker:1883'
+    depends_on:
+      - "broker"

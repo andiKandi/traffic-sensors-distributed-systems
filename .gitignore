@@ -1,0 +1,6 @@
+/sensor.Sensor/.idea/
+/Central/.idea/
+*.iml
+.gradle/
+.idea/
+target/

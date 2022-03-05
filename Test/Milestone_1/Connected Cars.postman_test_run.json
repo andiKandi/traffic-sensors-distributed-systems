@@ -1,0 +1,529 @@
+{
+	"id": "0c303475-6db9-4b37-a869-f324428f7baa",
+	"name": "Connected Cars",
+	"timestamp": "2020-12-14T10:53:27.432Z",
+	"collection_id": "3fac505c-5380-48e8-b1a4-c17f386dbeff",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 31,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1a9f192c-baa3-4801-93c4-df891168bffe",
+			"name": "http://localhost:8080/SensorData/current/all",
+			"url": "http://localhost:8080/SensorData/current/all",
+			"time": 29,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true,
+				"FUNCTIONAL TEST: Should have four metrics": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Should have four metrics": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				29
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true,
+					"FUNCTIONAL TEST: Should have four metrics": true
+				}
+			]
+		},
+		{
+			"id": "226acbe7-0e8a-413b-8e27-898c3973b941",
+			"name": "http://localhost:8080/SensorData/current/speed",
+			"url": "http://localhost:8080/SensorData/current/speed",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true,
+				"FUNCTIONAL TEST: Should have one metrics": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Should have one metrics": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true,
+					"FUNCTIONAL TEST: Should have one metrics": true
+				}
+			]
+		},
+		{
+			"id": "13c67c8f-e4ea-4565-a12a-7a6dc8436d4a",
+			"name": "http://localhost:8080/SensorData/current/traffic",
+			"url": "http://localhost:8080/SensorData/current/traffic",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true,
+				"FUNCTIONAL TEST: Should have one metrics": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Should have one metrics": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true,
+					"FUNCTIONAL TEST: Should have one metrics": true
+				}
+			]
+		},
+		{
+			"id": "26245e02-a319-49ed-8f0c-b3a27116b40c",
+			"name": "http://localhost:8080/SensorData/current/fuel",
+			"url": "http://localhost:8080/SensorData/current/fuel",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true,
+				"FUNCTIONAL TEST: Should have one metrics": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Should have one metrics": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true,
+					"FUNCTIONAL TEST: Should have one metrics": true
+				}
+			]
+		},
+		{
+			"id": "954c8d65-786f-4707-b793-dce917ffee3e",
+			"name": "http://localhost:8080/SensorData/current/distance",
+			"url": "http://localhost:8080/SensorData/current/distance",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true,
+				"FUNCTIONAL TEST: Should have one metrics": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Should have one metrics": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true,
+					"FUNCTIONAL TEST: Should have one metrics": true
+				}
+			]
+		},
+		{
+			"id": "748678cb-872f-46d4-a153-e0f08fe523fc",
+			"name": "http://localhost:8080/SensorData/history/all",
+			"url": "http://localhost:8080/SensorData/history/all",
+			"time": 165,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"PERFORMANCE TEST: Response time is less than 250ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PERFORMANCE TEST: Response time is less than 250ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"PERFORMANCE TEST: Response time is less than 250ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ea9f647a-c880-49dc-a07d-54980e536d94",
+			"name": "http://localhost:8080/SensorData/history/traffic",
+			"url": "http://localhost:8080/SensorData/history/traffic",
+			"time": 79,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "d2bf515e-ebfb-4831-b703-7c85a037c3f8",
+			"name": "http://localhost:8080/SensorData/history/fuel",
+			"url": "http://localhost:8080/SensorData/history/fuel",
+			"time": 51,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "98c6e248-dcd9-4a04-b1b3-4dc6c2693d04",
+			"name": "http://localhost:8080/SensorData/history/distance",
+			"url": "http://localhost:8080/SensorData/history/distance",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2ac91a4f-ffa1-4ed7-be1a-88d99e90eb95",
+			"name": "http://localhost:8080/SensorData/history/speed",
+			"url": "http://localhost:8080/SensorData/history/speed",
+			"time": 65,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				65
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a2d7019f-082f-44aa-a0f1-0b320ee2e73a",
+			"name": "http://localhost:8080/",
+			"url": "http://localhost:8080/",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "Ok"
+			},
+			"tests": {
+				"PERFORMANCE TEST: Response time is less than 200ms": true,
+				"FUNCTIONAL TEST: Status code is 200": true,
+				"FUNCTIONAL TEST: Should have four metrics": true
+			},
+			"testPassFailCounts": {
+				"PERFORMANCE TEST: Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FUNCTIONAL TEST: Should have four metrics": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"PERFORMANCE TEST: Response time is less than 200ms": true,
+					"FUNCTIONAL TEST: Status code is 200": true,
+					"FUNCTIONAL TEST: Should have four metrics": true
+				}
+			]
+		},
+		{
+			"id": "7bde5b2c-4736-4349-b061-8f762ea9f29c",
+			"name": "http:/localhost:8080/SensorData/_404",
+			"url": "http://localhost:8080/SensorData/",
+			"time": 10,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "965a5920-cf86-4ee0-abfb-b7709c79c8e2",
+			"name": "http:/localhost:8080/SensorData/current/all_501",
+			"url": "http://localhost:8080/SensorData/current/all",
+			"time": 6,
+			"responseCode": {
+				"code": 501,
+				"name": "Not Implemented"
+			},
+			"tests": {
+				"Status code is 501": true
+			},
+			"testPassFailCounts": {
+				"Status code is 501": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 501": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 523,
+	"collection": {
+		"requests": [
+			{
+				"id": "1a9f192c-baa3-4801-93c4-df891168bffe",
+				"method": "GET"
+			},
+			{
+				"id": "226acbe7-0e8a-413b-8e27-898c3973b941",
+				"method": "GET"
+			},
+			{
+				"id": "13c67c8f-e4ea-4565-a12a-7a6dc8436d4a",
+				"method": "GET"
+			},
+			{
+				"id": "26245e02-a319-49ed-8f0c-b3a27116b40c",
+				"method": "GET"
+			},
+			{
+				"id": "954c8d65-786f-4707-b793-dce917ffee3e",
+				"method": "GET"
+			},
+			{
+				"id": "748678cb-872f-46d4-a153-e0f08fe523fc",
+				"method": "GET"
+			},
+			{
+				"id": "ea9f647a-c880-49dc-a07d-54980e536d94",
+				"method": "GET"
+			},
+			{
+				"id": "d2bf515e-ebfb-4831-b703-7c85a037c3f8",
+				"method": "GET"
+			},
+			{
+				"id": "98c6e248-dcd9-4a04-b1b3-4dc6c2693d04",
+				"method": "GET"
+			},
+			{
+				"id": "2ac91a4f-ffa1-4ed7-be1a-88d99e90eb95",
+				"method": "GET"
+			},
+			{
+				"id": "a2d7019f-082f-44aa-a0f1-0b320ee2e73a",
+				"method": "GET"
+			},
+			{
+				"id": "7bde5b2c-4736-4349-b061-8f762ea9f29c",
+				"method": "GET"
+			},
+			{
+				"id": "965a5920-cf86-4ee0-abfb-b7709c79c8e2",
+				"method": "POST"
+			}
+		]
+	}
+}
